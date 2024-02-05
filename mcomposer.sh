@@ -2,9 +2,7 @@
 if [ -n "$(ls -A ./.php_conf 2>/dev/null)" ]
 then
 	source .php_conf
-	$PHP_VER --version | grep PHP -m 1
-	$PHP_VER $@
+	$PHP_VER /usr/bin/composer $@
 else
-	php --version 
-	php $@
+	composer $@
 fi
