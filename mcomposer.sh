@@ -2,7 +2,7 @@
 if [ -n "$(ls -A ./.php_conf 2>/dev/null)" ]
 then
 	source .php_conf
-	$PHP_VER /usr/bin/composer $@
+	$PHP_VER $(which composer) $@
 else
 	composer $@
 fi
